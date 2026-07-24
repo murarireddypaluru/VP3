@@ -7,8 +7,8 @@ var lastFed,fedTime;
 var changeState, readState
 
 function preload(){
-  sadDog=loadImage("images/dogImg.png");
-  happyDog=loadImage("Images/dogImg1.png");
+  sadDog=loadImage("virtual pet images/Dog.png");
+  happyDog=loadImage("virtual pet images/happy dog.png");
   garden=loadImage("virtual pet images/Garden.png")
   bedroom=loadImage("virtual pet images/Bed Room.png")
   washroom=loadImage("virtual pet images/Wash Room.png")
@@ -76,7 +76,7 @@ function draw() {
     update("sleeping")
     foodObj.bedroom()
   }
-  else if(currentTime==(lastFed+2) && currentTime==(lastFed+4)){
+  else if(currentTime>=(lastFed+3) && currentTime<=(lastFed+4)){
     update("bathing")
     foodObj.washroom()
   }else{
